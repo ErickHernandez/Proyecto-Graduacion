@@ -3,7 +3,7 @@ resource "aws_lb" "playsms-web-alb" {
   internal           = false
   load_balancer_type = "application"
   subnets            = [aws_subnet.playsms-subnet-public-1.id, aws_subnet.playsms-subnet-public-2.id]
-  security_groups    = [aws_security_group.elb-http.id]
+  security_groups    = [aws_security_group.alb-http.id]
   tags = {
     Name = "playsms-web-alb"
   }
